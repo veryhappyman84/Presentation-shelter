@@ -10,7 +10,6 @@ Open the link above. Controls:
 
 - Arrow keys, Space, or the on-screen buttons to move between slides
 - Swipe left or right on a phone
-- RU / EN button (top right) to switch language
 - Print the page (Ctrl+P / Cmd+P) to save it as a PDF
 
 ## Files

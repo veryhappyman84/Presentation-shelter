@@ -55,9 +55,6 @@ h2{font-size:clamp(26px,4.4vw,52px);line-height:1.1;letter-spacing:-.01em;margin
 .nav button{background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:10px;padding:10px 16px;font-size:15px;cursor:pointer}
 .nav button:hover{border-color:var(--amber)}
 .cnt{color:var(--muted);font-size:14px}
-.lang{position:fixed;top:14px;right:16px;z-index:9;background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:10px;padding:6px 12px;font-size:14px;cursor:pointer}
-body.ru .en{display:none}
-body:not(.ru) .ru{display:none}
 @media (max-width:760px){
   .slide{padding:7vh 6vw 12vh;justify-content:flex-start;overflow-y:auto}
   .g2,.g3,.road{grid-template-columns:1fr}
@@ -66,70 +63,69 @@ body:not(.ru) .ru{display:none}
 @media print{
   html,body{overflow:visible;height:auto}
   .slide{display:flex!important;position:relative;min-height:100vh;page-break-after:always}
-  .nav,.bar,.lang{display:none}
+  .nav,.bar{display:none}
 }
 </style>
 </head>
 <body>
 <div class="bar" id="bar"></div>
-<button class="lang" id="lang" aria-label="Language">RU / EN</button>
 
 <main class="deck" id="deck">
 
 <!-- 1 Title -->
 <section class="slide">
-  <div class="tag"><span class="en">Civil defense · United States</span><span class="ru">Гражданская оборона · США</span></div>
+  <div class="tag">Civil defense · United States</div>
   <h1>Shelter<span>Map</span> USA</h1>
-  <p class="sub"><span class="en">Know what to do. Find where to go. Share what you see.</span><span class="ru">Знай, что делать. Найди, куда идти. Делись тем, что видишь.</span></p>
-  <p class="note"><span class="en">Project presentation · MVP concept</span><span class="ru">Презентация проекта · концепция MVP</span></p>
+  <p class="sub">Know what to do. Find where to go. Share what you see.</p>
+  <p class="note">Project presentation · MVP concept</p>
 </section>
 
 <!-- 2 Problem -->
 <section class="slide">
-  <div class="tag"><span class="en">The problem</span><span class="ru">Проблема</span></div>
-  <h2><span class="en">In a crisis, people don't know what to do or where to go</span><span class="ru">В кризис люди не знают, что делать и куда идти</span></h2>
+  <div class="tag">The problem</div>
+  <h2>In a crisis, people don't know what to do or where to go</h2>
   <div class="grid g3">
-    <div class="card"><div class="ic">🧭</div><h3><span class="en">Scattered information</span><span class="ru">Информация разбросана</span></h3><p><span class="en">Guides, shelter lists and alerts live on dozens of different sites.</span><span class="ru">Инструкции, списки укрытий и оповещения лежат на десятках разных сайтов.</span></p></div>
-    <div class="card"><div class="ic">⏳</div><h3><span class="en">Outdated data</span><span class="ru">Устаревшие данные</span></h3><p><span class="en">Nobody knows if a point still has water, food or space right now.</span><span class="ru">Никто не знает, есть ли в точке вода, еда и места прямо сейчас.</span></p></div>
-    <div class="card"><div class="ic">📵</div><h3><span class="en">No connection</span><span class="ru">Нет связи</span></h3><p><span class="en">When networks fail, online-only guides become useless.</span><span class="ru">Когда сети падают, онлайн-инструкции перестают работать.</span></p></div>
+    <div class="card"><div class="ic">🧭</div><h3>Scattered information</h3><p>Guides, shelter lists and alerts live on dozens of different sites.</p></div>
+    <div class="card"><div class="ic">⏳</div><h3>Outdated data</h3><p>Nobody knows if a point still has water, food or space right now.</p></div>
+    <div class="card"><div class="ic">📵</div><h3>No connection</h3><p>When networks fail, online-only guides become useless.</p></div>
   </div>
 </section>
 
 <!-- 3 Solution -->
 <section class="slide">
-  <div class="tag"><span class="en">The solution</span><span class="ru">Решение</span></div>
-  <h2><span class="en">One place for guides, a live map and community reports</span><span class="ru">Одно место: инструкции, живая карта и отчёты людей</span></h2>
+  <div class="tag">The solution</div>
+  <h2>One place for guides, a live map and community reports</h2>
   <div class="grid g2">
-    <div class="card"><div class="ic">📘</div><h3><span class="en">Scenario guides</span><span class="ru">Гайды по сценариям</span></h3><p><span class="en">Clear Before / During / After steps and checklists for each emergency.</span><span class="ru">Понятные шаги «До / Во время / После» и чек-листы для каждой ЧС.</span></p></div>
-    <div class="card"><div class="ic">🗺️</div><h3><span class="en">Safe-places map</span><span class="ru">Карта безопасных мест</span></h3><p><span class="en">Shelters, food and water points, medical help, and red danger zones.</span><span class="ru">Укрытия, пункты еды и воды, медпомощь и красные зоны опасности.</span></p></div>
-    <div class="card"><div class="ic">📸</div><h3><span class="en">Fresh community reports</span><span class="ru">Свежие отчёты людей</span></h3><p><span class="en">Users add photos and confirm what is available right now.</span><span class="ru">Пользователи добавляют фото и подтверждают, что доступно сейчас.</span></p></div>
-    <div class="card"><div class="ic">📴</div><h3><span class="en">Offline mode (next)</span><span class="ru">Офлайн-режим (далее)</span></h3><p><span class="en">Guides and map data saved on the phone for when the network is down.</span><span class="ru">Инструкции и карта сохраняются в телефоне на случай отсутствия сети.</span></p></div>
+    <div class="card"><div class="ic">📘</div><h3>Scenario guides</h3><p>Clear Before / During / After steps and checklists for each emergency.</p></div>
+    <div class="card"><div class="ic">🗺️</div><h3>Safe-places map</h3><p>Shelters, food and water points, medical help, and red danger zones.</p></div>
+    <div class="card"><div class="ic">📸</div><h3>Fresh community reports</h3><p>Users add photos and confirm what is available right now.</p></div>
+    <div class="card"><div class="ic">📴</div><h3>Offline mode (next)</h3><p>Guides and map data saved on the phone for when the network is down.</p></div>
   </div>
 </section>
 
 <!-- 4 Scenarios -->
 <section class="slide">
-  <div class="tag"><span class="en">Coverage</span><span class="ru">Охват</span></div>
-  <h2><span class="en">Ten scenarios in the first version</span><span class="ru">Десять сценариев в первой версии</span></h2>
+  <div class="tag">Coverage</div>
+  <h2>Ten scenarios in the first version</h2>
   <div class="grid g5">
-    <div class="card"><div class="ic">🌀</div><p><span class="en">Hurricane</span><span class="ru">Ураган</span></p></div>
-    <div class="card"><div class="ic">🌊</div><p><span class="en">Tsunami</span><span class="ru">Цунами</span></p></div>
-    <div class="card"><div class="ic">🏚️</div><p><span class="en">Earthquake</span><span class="ru">Землетрясение</span></p></div>
-    <div class="card"><div class="ic">💧</div><p><span class="en">Flood</span><span class="ru">Наводнение</span></p></div>
-    <div class="card"><div class="ic">☢️</div><p><span class="en">Nuclear / fallout</span><span class="ru">Ядерный удар</span></p></div>
-    <div class="card"><div class="ic">🪖</div><p><span class="en">War / conflict</span><span class="ru">Война / конфликт</span></p></div>
-    <div class="card"><div class="ic">🦠</div><p><span class="en">Pandemic / lockdown</span><span class="ru">Пандемия / локдаун</span></p></div>
-    <div class="card"><div class="ic">🚰</div><p><span class="en">Contaminated water</span><span class="ru">Заражённая вода</span></p></div>
-    <div class="card"><div class="ic">🔥</div><p><span class="en">Civil unrest</span><span class="ru">Беспорядки</span></p></div>
-    <div class="card"><div class="ic">⚡</div><p><span class="en">Grid failure</span><span class="ru">Отключение электросети</span></p></div>
+    <div class="card"><div class="ic">🌀</div><p>Hurricane</p></div>
+    <div class="card"><div class="ic">🌊</div><p>Tsunami</p></div>
+    <div class="card"><div class="ic">🏚️</div><p>Earthquake</p></div>
+    <div class="card"><div class="ic">💧</div><p>Flood</p></div>
+    <div class="card"><div class="ic">☢️</div><p>Nuclear / fallout</p></div>
+    <div class="card"><div class="ic">🪖</div><p>War / conflict</p></div>
+    <div class="card"><div class="ic">🦠</div><p>Pandemic / lockdown</p></div>
+    <div class="card"><div class="ic">🚰</div><p>Contaminated water</p></div>
+    <div class="card"><div class="ic">🔥</div><p>Civil unrest</p></div>
+    <div class="card"><div class="ic">⚡</div><p>Grid failure</p></div>
   </div>
-  <p class="note"><span class="en">Content is based on public guidance such as Ready.gov and FEMA.</span><span class="ru">Контент основан на открытых рекомендациях, таких как Ready.gov и FEMA.</span></p>
+  <p class="note">Content is based on public guidance such as Ready.gov and FEMA.</p>
 </section>
 
 <!-- 5 Map -->
 <section class="slide">
-  <div class="tag"><span class="en">Core feature</span><span class="ru">Ключевая функция</span></div>
-  <h2><span class="en">A live map people can trust</span><span class="ru">Живая карта, которой можно доверять</span></h2>
+  <div class="tag">Core feature</div>
+  <h2>A live map people can trust</h2>
   <div class="grid g2" style="align-items:stretch">
     <div class="map" aria-label="Map illustration">
       <div class="zone" style="left:56%;top:14%;width:34%;aspect-ratio:1"></div>
@@ -140,15 +136,15 @@ body:not(.ru) .ru{display:none}
       <div class="pin" style="left:70%;top:68%;background:var(--blue)"></div>
     </div>
     <div class="card">
-      <h3><span class="en">Layers</span><span class="ru">Слои</span></h3>
-      <span class="chip"><span class="dot amber"></span><span class="en">Shelters</span><span class="ru">Укрытия</span></span>
-      <span class="chip"><span class="dot green"></span><span class="en">Food &amp; water</span><span class="ru">Еда и вода</span></span>
-      <span class="chip"><span class="dot blue"></span><span class="en">Medical</span><span class="ru">Медпомощь</span></span>
-      <span class="chip"><span class="dot red"></span><span class="en">Danger zones</span><span class="ru">Красные зоны</span></span>
+      <h3>Layers</h3>
+      <span class="chip"><span class="dot amber"></span>Shelters</span>
+      <span class="chip"><span class="dot green"></span>Food &amp; water</span>
+      <span class="chip"><span class="dot blue"></span>Medical</span>
+      <span class="chip"><span class="dot red"></span>Danger zones</span>
       <ul style="margin-top:1em">
-        <li><span class="en">Each point shows type, photos, last-confirmed time and confirmations</span><span class="ru">Каждая точка: тип, фото, время последнего подтверждения и число подтверждений</span></li>
-        <li><span class="en">Filter by freshness: 24 hours, 7 days, 30 days</span><span class="ru">Фильтр по свежести: 24 часа, 7 дней, 30 дней</span></li>
-        <li><span class="en">Danger zones drawn as red areas: “do not go here”</span><span class="ru">Зоны опасности красным: «сюда не ехать»</span></li>
+        <li>Each point shows type, photos, last-confirmed time and confirmations</li>
+        <li>Filter by freshness: 24 hours, 7 days, 30 days</li>
+        <li>Danger zones drawn as red areas: “do not go here”</li>
       </ul>
     </div>
   </div>
@@ -156,94 +152,87 @@ body:not(.ru) .ru{display:none}
 
 <!-- 6 How it works -->
 <section class="slide">
-  <div class="tag"><span class="en">User flow</span><span class="ru">Как это работает</span></div>
-  <h2><span class="en">From a report to a verified point in three steps</span><span class="ru">От отчёта до проверенной точки за три шага</span></h2>
+  <div class="tag">User flow</div>
+  <h2>From a report to a verified point in three steps</h2>
   <div class="grid" style="gap:3vh">
-    <div class="step"><div class="num">1</div><div class="card" style="flex:1"><h3><span class="en">Report</span><span class="ru">Отчёт</span></h3><p><span class="en">A signed-in user adds a photo, type and location of a shelter, supplies or a danger.</span><span class="ru">Авторизованный пользователь добавляет фото, тип и место: укрытие, запасы или опасность.</span></p></div></div>
-    <div class="step"><div class="num">2</div><div class="card" style="flex:1"><h3><span class="en">Review</span><span class="ru">Проверка</span></h3><p><span class="en">The report starts as “pending” and goes live after moderator approval.</span><span class="ru">Отчёт сначала «на проверке» и попадает на карту после одобрения модератора.</span></p></div></div>
-    <div class="step"><div class="num">3</div><div class="card" style="flex:1"><h3><span class="en">Confirm</span><span class="ru">Подтверждение</span></h3><p><span class="en">Other people confirm it. Points without fresh confirmations fade and are marked outdated.</span><span class="ru">Другие люди подтверждают. Точки без свежих подтверждений бледнеют и помечаются устаревшими.</span></p></div></div>
+    <div class="step"><div class="num">1</div><div class="card" style="flex:1"><h3>Report</h3><p>A signed-in user adds a photo, type and location of a shelter, supplies or a danger.</p></div></div>
+    <div class="step"><div class="num">2</div><div class="card" style="flex:1"><h3>Review</h3><p>The report starts as “pending” and goes live after moderator approval.</p></div></div>
+    <div class="step"><div class="num">3</div><div class="card" style="flex:1"><h3>Confirm</h3><p>Other people confirm it. Points without fresh confirmations fade and are marked outdated.</p></div></div>
   </div>
 </section>
 
 <!-- 7 Trust -->
 <section class="slide">
-  <div class="tag"><span class="en">Trust &amp; safety</span><span class="ru">Доверие и безопасность</span></div>
-  <h2><span class="en">A wrong report in a crisis is dangerous, so trust is built in</span><span class="ru">Ложный отчёт в кризис опасен, поэтому доверие заложено в основу</span></h2>
+  <div class="tag">Trust &amp; safety</div>
+  <h2>A wrong report in a crisis is dangerous, so trust is built in</h2>
   <div class="grid g2">
-    <div class="card"><h3><span class="en">Data quality</span><span class="ru">Качество данных</span></h3><ul>
-      <li><span class="en">Moderation before publishing</span><span class="ru">Модерация перед публикацией</span></li>
-      <li><span class="en">Multiple confirmations raise trust</span><span class="ru">Несколько подтверждений повышают доверие</span></li>
-      <li><span class="en">Automatic “outdated” after 30 days</span><span class="ru">Автопометка «устарело» через 30 дней</span></li>
-      <li><span class="en">Abuse reporting and rate limits</span><span class="ru">Жалобы на злоупотребления и лимиты</span></li>
+    <div class="card"><h3>Data quality</h3><ul>
+      <li>Moderation before publishing</li>
+      <li>Multiple confirmations raise trust</li>
+      <li>Automatic “outdated” after 30 days</li>
+      <li>Abuse reporting and rate limits</li>
     </ul></div>
-    <div class="card"><h3><span class="en">Privacy &amp; responsibility</span><span class="ru">Приватность и ответственность</span></h3><ul>
-      <li><span class="en">Photo location metadata is removed</span><span class="ru">Метаданные геолокации из фото удаляются</span></li>
-      <li><span class="en">Row-level security in the database</span><span class="ru">Защита на уровне строк в базе данных</span></li>
-      <li><span class="en">Official sources shown as the baseline</span><span class="ru">Официальные источники как основа</span></li>
-      <li><span class="en">Clear disclaimer: call 911 in an emergency</span><span class="ru">Чёткий дисклеймер: в ЧС звоните 911</span></li>
+    <div class="card"><h3>Privacy &amp; responsibility</h3><ul>
+      <li>Photo location metadata is removed</li>
+      <li>Row-level security in the database</li>
+      <li>Official sources shown as the baseline</li>
+      <li>Clear disclaimer: call 911 in an emergency</li>
     </ul></div>
   </div>
 </section>
 
 <!-- 8 Roadmap -->
 <section class="slide">
-  <div class="tag"><span class="en">Roadmap</span><span class="ru">Дорожная карта</span></div>
-  <h2><span class="en">Start small, prove it, then scale</span><span class="ru">Начать с малого, проверить, затем масштабировать</span></h2>
+  <div class="tag">Roadmap</div>
+  <h2>Start small, prove it, then scale</h2>
   <div class="road">
     <div class="card"><h3>1 · MVP</h3><ul>
-      <li><span class="en">Website with key guides</span><span class="ru">Сайт с ключевыми гайдами</span></li>
-      <li><span class="en">Map with official data</span><span class="ru">Карта с официальными данными</span></li>
-      <li><span class="en">Reports, photos, moderation</span><span class="ru">Отчёты, фото, модерация</span></li>
+      <li>Website with key guides</li>
+      <li>Map with official data</li>
+      <li>Reports, photos, moderation</li>
     </ul></div>
-    <div class="card"><h3>2 · <span class="en">Pilot</span><span class="ru">Пилот</span></h3><ul>
-      <li><span class="en">Launch in 1–2 high-risk states</span><span class="ru">Запуск в 1–2 штатах с высоким риском</span></li>
-      <li><span class="en">Verify data, gather feedback</span><span class="ru">Проверка данных, сбор отзывов</span></li>
-      <li><span class="en">Trust scores for contributors</span><span class="ru">Рейтинг доверия авторов</span></li>
+    <div class="card"><h3>2 · Pilot</h3><ul>
+      <li>Launch in 1–2 high-risk states</li>
+      <li>Verify data, gather feedback</li>
+      <li>Trust scores for contributors</li>
     </ul></div>
-    <div class="card"><h3>3 · <span class="en">Scale</span><span class="ru">Масштаб</span></h3><ul>
-      <li><span class="en">All US states</span><span class="ru">Все штаты США</span></li>
-      <li><span class="en">Offline PWA and alerts</span><span class="ru">Офлайн-PWA и оповещения</span></li>
-      <li><span class="en">Partnerships with agencies and NGOs</span><span class="ru">Партнёрство с ведомствами и НКО</span></li>
+    <div class="card"><h3>3 · Scale</h3><ul>
+      <li>All US states</li>
+      <li>Offline PWA and alerts</li>
+      <li>Partnerships with agencies and NGOs</li>
     </ul></div>
   </div>
 </section>
 
 <!-- 9 Tech -->
 <section class="slide">
-  <div class="tag"><span class="en">Technology</span><span class="ru">Технологии</span></div>
-  <h2><span class="en">Fast to build, cheap to run</span><span class="ru">Быстро строить, недорого запускать</span></h2>
+  <div class="tag">Technology</div>
+  <h2>Fast to build, cheap to run</h2>
   <div class="grid g3">
-    <div class="card"><div class="ic">⚛️</div><h3>Frontend</h3><p><span class="en">React, built with Lovable; mobile-first, dark high-contrast UI.</span><span class="ru">React, сборка в Lovable; mobile-first, тёмный контрастный интерфейс.</span></p></div>
-    <div class="card"><div class="ic">🗺️</div><h3><span class="en">Map</span><span class="ru">Карта</span></h3><p><span class="en">Leaflet with OpenStreetMap; free and flexible.</span><span class="ru">Leaflet и OpenStreetMap; бесплатно и гибко.</span></p></div>
-    <div class="card"><div class="ic">🗄️</div><h3>Backend</h3><p><span class="en">Supabase: database, auth, photo storage and security rules.</span><span class="ru">Supabase: база данных, авторизация, хранилище фото и правила безопасности.</span></p></div>
+    <div class="card"><div class="ic">⚛️</div><h3>Frontend</h3><p>React; mobile-first, dark high-contrast UI.</p></div>
+    <div class="card"><div class="ic">🗺️</div><h3>Map</h3><p>Leaflet with OpenStreetMap; free and flexible.</p></div>
+    <div class="card"><div class="ic">🗄️</div><h3>Backend</h3><p>Database, auth, photo storage and security rules.</p></div>
   </div>
-  <p class="note"><span class="en">Later: PWA with cached guides and map tiles for offline use.</span><span class="ru">Позже: PWA с кэшем гайдов и карты для работы офлайн.</span></p>
+  <p class="note">Later: PWA with cached guides and map tiles for offline use.</p>
 </section>
 
 <!-- 10 Audience -->
 <section class="slide">
-  <div class="tag"><span class="en">Audience &amp; sustainability</span><span class="ru">Аудитория и устойчивость</span></div>
-  <h2><span class="en">Built for everyday people, sustained by the community</span><span class="ru">Для обычных людей, поддерживается сообществом</span></h2>
+  <div class="tag">Audience &amp; sustainability</div>
+  <h2>Built for everyday people, sustained by the community</h2>
   <div class="grid g2">
-    <div class="card"><h3><span class="en">Who it's for</span><span class="ru">Для кого</span></h3><ul>
-      <li><span class="en">Families and preparedness-minded people</span><span class="ru">Семьи и те, кто готовится заранее</span></li>
-      <li><span class="en">Residents of hurricane, quake and flood regions</span><span class="ru">Жители регионов ураганов, землетрясений и наводнений</span></li>
-      <li><span class="en">Volunteers and community groups</span><span class="ru">Волонтёры и общественные группы</span></li>
+    <div class="card"><h3>Who it's for</h3><ul>
+      <li>Families and preparedness-minded people</li>
+      <li>Residents of hurricane, quake and flood regions</li>
+      <li>Volunteers and community groups</li>
     </ul></div>
-    <div class="card"><h3><span class="en">Possible funding paths</span><span class="ru">Возможные источники поддержки</span></h3><ul>
-      <li><span class="en">Donations and grants</span><span class="ru">Пожертвования и гранты</span></li>
-      <li><span class="en">Partnerships with NGOs and local organizations</span><span class="ru">Партнёрство с НКО и местными организациями</span></li>
-      <li><span class="en">Optional premium: printable kits, alerts</span><span class="ru">Опционально: печатные наборы, оповещения</span></li>
+    <div class="card"><h3>Possible funding paths</h3><ul>
+      <li>Donations and grants</li>
+      <li>Partnerships with NGOs and local organizations</li>
+      <li>Optional premium: printable kits, alerts</li>
     </ul></div>
   </div>
-</section>
-
-<!-- 11 CTA -->
-<section class="slide">
-  <div class="tag"><span class="en">Next steps</span><span class="ru">Следующие шаги</span></div>
-  <h1 style="font-size:clamp(30px,5.6vw,68px)"><span class="en">Let's build the <span>first prototype</span></span><span class="ru">Соберём <span>первый прототип</span></span></h1>
-  <p class="sub"><span class="en">Prototype in Lovable → connect Supabase → add official data → pilot in one state.</span><span class="ru">Прототип в Lovable → подключить Supabase → добавить официальные данные → пилот в одном штате.</span></p>
-  <p class="note"><span class="en">This website is informational and does not replace instructions from emergency services. In an emergency, call 911.</span><span class="ru">Сайт носит информационный характер и не заменяет указания экстренных служб. В экстренной ситуации звоните 911.</span></p>
+  <p class="note">This website is informational and does not replace instructions from emergency services. In an emergency, call 911.</p>
 </section>
 
 </main>
@@ -279,13 +268,6 @@ body:not(.ru) .ru{display:none}
     if(x0===null)return; var dx=e.changedTouches[0].clientX-x0;
     if(Math.abs(dx)>60) show(dx<0?i+1:i-1); x0=null;
   });
-  // language
-  var ru=false;
-  try{ru=localStorage.getItem('lang')==='ru'}catch(e){}
-  if(!ru && !localStorage.getItem('lang') && (navigator.language||'').toLowerCase().indexOf('ru')===0) ru=true;
-  function setLang(){document.body.classList.toggle('ru',ru);document.documentElement.lang=ru?'ru':'en';try{localStorage.setItem('lang',ru?'ru':'en')}catch(e){}}
-  document.getElementById('lang').onclick=function(){ru=!ru;setLang()};
-  setLang();
   var h=parseInt((location.hash||'').slice(1),10);
   show(isNaN(h)?0:h-1);
 })();
