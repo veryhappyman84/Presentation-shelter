@@ -2,7 +2,7 @@
 
 Civil defense and emergency preparedness project for the United States: scenario guides, a live map of shelters, food, water and danger zones, and community reports.
 
-**Live presentation:** https://veryhappyman84.github.io/presentation-shelter/
+**Live presentation:** https://veryhappyman84.github.io/Presentation-shelter/
 
 ## How to view
 
